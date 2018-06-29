@@ -37,6 +37,13 @@ ENV SPARK_HOME /spark
 
 WORKDIR /spark/work-dir
 
+COPY spark-defaults.conf /spark/conf
+COPY core-site.xml /spark/conf
+
+RUN mkdir /opt/alluxio
+COPY alluxio-client-1.7.1.jar /opt/alluxio
+COPY alluxio-core-client-hdfs-1.7.1.jar /opt/alluxio
+
 EXPOSE 4040 8080 8081 
 
 CMD ["/bin/bash"]

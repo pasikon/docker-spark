@@ -20,6 +20,10 @@
     <name>fs.defaultFS</name>
     <value>alluxio://alluxio-master:19998</value>
   </property>
+  <property>
+    <name>fs.alluxio.impl</name>
+    <value>alluxio.hadoop.FileSystem</value>
+  </property>
 <!--   <property>
     <name>alluxio.zookeeper.enabled</name>
     <value>true</value>
